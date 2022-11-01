@@ -1,7 +1,8 @@
 package charmApp
 
-import "os"
+import "fmt"
 
 func main() {
-	commandLineArg := os.Args[1:]
+	fmt.Println("Here's a poem!")
+	go docReader()
 }
