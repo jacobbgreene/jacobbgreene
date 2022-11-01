@@ -1,4 +1,4 @@
-package charmApp
+package main
 
 import (
 	"fmt"
@@ -6,19 +6,8 @@ import (
 )
 
 func docReader() {
-	items, _ := os.ReadDir(".")
+	items, _ := os.ReadDir("charmApp/Poems")
 	for _, item := range items {
-		if item.IsDir() {
-			subitems, _ := os.ReadDir(item.Name())
-			for _, subitem := range subitems {
-				if !subitem.IsDir() {
-					// handle file there
-					fmt.Println(item.Name() + "/" + subitem.Name())
-				}
-			}
-		} else {
-			// handle file there
-			fmt.Println(item.Name())
-		}
+		fmt.Println(item.Name())
 	}
 }

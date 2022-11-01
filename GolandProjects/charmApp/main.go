@@ -1,4 +1,4 @@
-package charmApp
+package main
 
 import "fmt"
 
