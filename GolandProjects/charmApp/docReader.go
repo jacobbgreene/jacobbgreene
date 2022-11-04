@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"os/exec"
 )
 
 func docReader() {
@@ -15,8 +14,6 @@ func docReader() {
 	for _, file := range files {
 		fmt.Println(file.Name())
 		os.ReadFile(file.Name())
-		exec.Command("vhs < " + file.Name())
-
 	}
 
 }
